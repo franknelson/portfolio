@@ -34,8 +34,8 @@
 			wp_enqueue_script( 'comment-reply' );
 
 		// Load Stylesheets
-//		wp_enqueue_style( 'html5reset-reset', get_template_directory_uri() . '/reset.css' );
-//		wp_enqueue_style( 'html5reset-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'html5reset-reset', get_template_directory_uri() . '/reset.css' );
+		wp_enqueue_style( 'html5reset-style', get_stylesheet_uri() );
         wp_enqueue_style( 'html5reset-style-googlefonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700');
         wp_enqueue_style( 'html5reset-style-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
@@ -134,5 +134,42 @@
 			esc_attr( get_the_author() )
 		);
 	}
+
+/**
+  * Custom post type for the project pages
+  */
+add_action( 'init', 'create_my_post_types' );
+
+function create_my_post_types() {
+ register_post_type( 'project', 
+ array(
+      'labels' => array(
+      	'name' => __( 'project' ),
+      	'singular_name' => __( 'project' ),
+      	'add_new' => __( 'Add New' ),
+      	'add_new_item' => __( 'Add New project' ),
+      	'edit' => __( 'Edit' ),
+      	'edit_item' => __( 'Edit project' ),
+      	'new_item' => __( 'New project' ),
+      	'view' => __( 'View project' ),
+      	'view_item' => __( 'View project' ),
+      	'search_items' => __( 'Search projects' ),
+      	'not_found' => __( 'No projects found' ),
+      	'not_found_in_trash' => __( 'No projects found in Trash' ),
+      	'parent' => __( 'Parent project' ),
+      ),
+ 'public' => true,
+      'menu_position' => 4,
+      'rewrite' => array('slug' => 'project'),
+      'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+      'taxonomies' => array('category', 'post_tag'),
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'query_var' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+     )
+  );
+}
 
 ?>

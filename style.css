@@ -66,7 +66,10 @@ nav ul li a[href*="pinterest.com"]::before{content: '\f0d2';}
 nav ul li a[href*="github.com"]::before{content: '\f092';}
 nav ul li a[href*="linkedin.com"]::before{content: '\f08c';}
 
+h1.entry-title{font-size:3em; font-weight:bold; font-family:'Open Sans', sans-serif;}
 
+.thumbnail{width:25%; float:left;}
+.thumbnail img{width:100%;height:auto;}
 /* Print styles!
 -------------------------------------------------------------------------------*/
 @media print {
