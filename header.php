@@ -131,10 +131,14 @@
 
 		<header id="header" role="banner">
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<div class="description"><?php bloginfo( 'description' ); ?></div>
-		</header>
 
-		<nav id="nav" role="navigation">
-			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
-		</nav>
+            <nav id="nav" role="navigation">
+                <?php wp_nav_menu( array(
+                    'menu' => 'social',
+                    'link_before' => '<span class="nav-links">',
+                    'link_after' => '</span>',
+                ) ); ?>
+            </nav>
+            
+        </header>
 

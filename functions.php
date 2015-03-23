@@ -17,7 +17,10 @@
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
 		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status' ) );
-		register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );
+		register_nav_menus( array(
+            'primary'=> __( 'Navigation Menu', 'html5reset' ),
+            'social' => __( 'Social Menu', 'html5reset' ),
+        ));
 		add_theme_support( 'post-thumbnails' );
 	}
 	add_action( 'after_setup_theme', 'html5reset_setup' );
@@ -33,6 +36,8 @@
 		// Load Stylesheets
 //		wp_enqueue_style( 'html5reset-reset', get_template_directory_uri() . '/reset.css' );
 //		wp_enqueue_style( 'html5reset-style', get_stylesheet_uri() );
+        wp_enqueue_style( 'html5reset-style-googlefonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700');
+        wp_enqueue_style( 'html5reset-style-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 		// Load IE Stylesheet.
 //		wp_enqueue_style( 'html5reset-ie', get_template_directory_uri() . '/css/ie.css', array( 'html5reset-style' ), '20130213' );
