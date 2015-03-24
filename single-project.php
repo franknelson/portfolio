@@ -9,16 +9,9 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<div class="hero">
+			
+            <div class="hero">
                 <img src="<?php the_field('hero_image'); ?>" alt="" />
-            </div>
-            
-            <div class="thumbnail">
-                <img src="<?php the_field('tile_image'); ?>" alt="" />
-            </div>
-            
-            <div class="thumbnail">
-                <?php the_post_thumbnail(); ?>
             </div>
             
 			<h1 class="entry-title"><?php the_title(); ?></h1>
