@@ -8,13 +8,11 @@
 			
 		<article class="post" id="post-<?php the_ID(); ?>">
 
-			<div class="entry">
+			<div class="home-entry">
 
 				<?php the_content(); ?>
 
 			</div>
-
-
 
 		</article>
 

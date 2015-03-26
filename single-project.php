@@ -9,28 +9,27 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			
+			<h1 class="entry-title"><?php the_title(); ?></h1>
             <div class="hero">
                 <img src="<?php the_field('hero_image'); ?>" alt="" />
             </div>
             
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-
 			<div class="entry-content">
                 
                 <?php the_content(); ?>
 
-				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
-				
-				<?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?>
-
 			</div>
+            
+            <div class="article-info">
+                <ul>
+                    <li><?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?></li>
+                    <li><?php posted_on(); ?></li>
+                </ul>
+            </div>
 						
 		</article>
 
 	<?php endwhile; endif; ?>
-
-<?php post_navigation(); ?>
 	
 <?php get_sidebar(); ?>
 
