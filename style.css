@@ -121,6 +121,9 @@ article pre code{background:rgb(245,245,245); padding:1em 1.25em;display:block;}
 
 aside{width:80%; float:right;}
 
+/* .open div */
+.open{width:100%; height:15em; background:rgb(12,240,122);}
+
 /* Print styles!
 -------------------------------------------------------------------------------*/
 @media print {

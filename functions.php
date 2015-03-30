@@ -50,6 +50,29 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'html5reset_scripts_styles' );
 
+//load the following .js only on the home page
+    function my_scripts_method() {
+        wp_enqueue_script(
+            'custom-script',
+            get_template_directory_uri() . '/_/js/custom_script.js',
+            array('jquery')
+        );
+    }
+    if( is_front_page ) add_action('wp_enqueue_scripts', 'my_scripts_method');
+
+    //load the following .js only on the project post-types
+    function project_scripts_method() {
+        wp_enqueue_script(
+            'project-script',
+            get_template_directory_uri() . '/_/js/project_script.js',
+            array('jquery')
+        );
+    }
+    //if(is_page( 'Home' ) ) add_action('wp_enqueue_scripts', 'my_scripts_method');
+    //if(is_single( 'Random Letter and Font App' )) add_action('wp_enqueue_scripts', 'project_scripts_method');
+    if(is_single ) add_action('wp_enqueue_scripts', 'project_scripts_method');
+
+
 	// WP Title (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
 	function html5reset_wp_title( $title, $sep ) {
 		global $paged, $page;

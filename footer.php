@@ -9,7 +9,7 @@
 			<small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
 		</footer>
 
-	</div>
+	</div> <!-- end wrapper -->
 
 	<?php wp_footer(); ?>
 

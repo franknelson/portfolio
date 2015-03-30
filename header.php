@@ -126,7 +126,6 @@
 
 <body <?php body_class(); ?>>
 
-	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 	<div id="wrapper">
 
 		<header id="header" role="banner">
