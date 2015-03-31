@@ -70,7 +70,7 @@
     }
     //if(is_page( 'Home' ) ) add_action('wp_enqueue_scripts', 'my_scripts_method');
     //if(is_single( 'Random Letter and Font App' )) add_action('wp_enqueue_scripts', 'project_scripts_method');
-    if(is_single ) add_action('wp_enqueue_scripts', 'project_scripts_method');
+    if(is_singular ( 'project' ) ) add_action('wp_enqueue_scripts', 'project_scripts_method');
 
 
 	// WP Title (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
@@ -203,5 +203,14 @@ function my_post_image_html( $html, $post_id, $post_image_id ) {
 	$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_the_title( $post_id ) ) . '">' . $html . '</a>';
 	return $html;
 }
+
+function custom_conference_in_home_loop( $query ) {
+ if ( is_home() && $query->is_main_query() )
+ //$query->set( 'post_type', array( 'post', 'project') );
+ $query->set( 'post_type', array('project') );
+ return $query;
+ }
+
+add_filter( 'pre_get_posts', 'custom_conference_in_home_loop' );
 
 ?>

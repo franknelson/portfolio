@@ -44,13 +44,13 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 html{background:pink;}
 #wrapper {max-width: 75em; margin: 0 auto; background:rgb(240,240,240);position:relative;}
 
-header{overflow:hidden; position:relative;width:20%; float:left;}
-header h1{ width:100%; float:left;height:0; padding-bottom:100%;text-align:center;font-size:5em;line-height:3em;background:rgb(25, 25, 25); color:rgb(225,225,225);}
+header{overflow:hidden; position:relative;width:100%; clear:both; background:pink;}
+header h1{ width:2.75em; float:left;width:2.75em; text-align:center;font-size:1em;line-height:2.75em;background:rgb(25, 25, 25); color:rgb(225,225,225);}
 header h1 a, header h1 a:visited {color:rgb(225,225,225); text-decoration:none;}
 header h1 a:hover{color:red;}
-nav {width:100%; float:left; background:rgb(200,200,200);position:relative;height:0; padding-bottom:100%;}
-nav ul {float:right;padding:5% 0;}
-nav ul li {display:inline-block;float:left;width:100%;padding-left:20%;height:0; padding-bottom:18%;line-height:2em;text-align:center;}
+nav {width:80%; float:left; position:relative;overflow:hidden;}
+nav ul {float:right;}
+nav ul li {display:inline-block;float:left;padding-left:.75em;height:2.75em;line-height:2.75em;text-align:center;}
 nav ul li a{color:white; text-decoration:none;}
 nav ul li a:hover{color:rgb(75,75,75); text-decoration:none;}
 nav ul li a:before{
@@ -72,7 +72,7 @@ nav ul li a[href*="linkedin.com"]::before{content: '\f08c';}
 
 nav ul li a span {display:none;}
 
-h1.entry-title{font-size:3em; font-weight:bold;padding-bottom:1em;}
+h1.entry-title{font-size:2em; font-weight:bold;padding:0 .5em 1em .5em;}
 
 .thumbnail{width:25%; float:left;position:relative;}
 .thumbnail img{width:100%;height:auto;margin:0; padding:0; vertical-align:bottom;}
@@ -110,14 +110,18 @@ footer{clear:both;}
 }
 
 .home-entry p{font-size:2em;padding:1.5em 0 0 1em;line-height:1em;margin:0;}
-article{width:40%;float:left;}
+.content-wrapper{position:relative; overflow:hidden; width:100%;padding:.5em;}
+article{width:100%;float:left;padding: 1em 0;}
+article .index_thumbnail img {width:25%;float:left;height:auto;clear:left;margin-right:1em;}
+article footer {width:75%;float:right;height:auto;display:inline;clear:none;}
 article .home-entry{height:0; width:100%; padding-bottom:100%;background:rgb(35,212,96);}
-article h2{font-weight:bold; font-size:1.75em;}
+article h2{font-weight:bold; font-size:1.25em;}
 article p{font-size:1.25em; line-height:1.4em;margin-bottom:1em;}
 article pre{background:rgb(215,215,215); padding:.75em 1em;margin-bottom:1em;}
 article pre code{background:rgb(245,245,245); padding:1em 1.25em;display:block;}
 .indent{padding-left:2em;padding-bottom:0; margin-bottom:0;}
-.entry-content {padding:2em 2.5em;}
+.entry-content {padding:1em;}
+
 
 aside{width:80%; float:right;}
 

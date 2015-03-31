@@ -5,18 +5,19 @@
  * @since HTML5 Reset 2.0
  */
  get_header(); ?>
-
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <div class="content-wrapper">
+	
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			<div class="index_thumbnail">
+                <?php the_post_thumbnail(); ?>
+            </div>
+            
+            <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
 			<?php posted_on(); ?>
-
-			<div class="entry">
-				<?php the_content(); ?>
-			</div>
 
 			<footer class="postmetadata">
 				<?php the_tags(__('Tags: ','html5reset'), ', ', '<br />'); ?>
@@ -35,6 +36,8 @@
 		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
 
 	<?php endif; ?>
+        
+    </div>
 
 <?php get_sidebar(); ?>
 
