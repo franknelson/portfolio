@@ -23,11 +23,16 @@
                 }
             ?>
             
-<!--
-            <div class="hero">
-                <img src="<?php the_field('hero_image'); ?>" alt="" />
-            </div>
--->
+                        
+            <?php $projectLink = get_field('project_link');
+                if  ( $projectLink ) {
+                    echo "<div class='project_link'>";
+                    echo '<a href ="';
+                    echo the_field('project_link');
+                    echo ' ">Project Link ';
+                    echo "</a></div>";
+                }
+            ?>
             
                 
                 

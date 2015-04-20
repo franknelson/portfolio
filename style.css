@@ -74,7 +74,7 @@ nav ul li a span {display:none;}
 
 h1.entry-title{font-size:2em; font-weight:bold;padding:0 .5em 1em .5em;}
 
-.thumbnail{width:25%; float:left;position:relative;}
+.thumbnail{width:100%; float:left;position:relative;}
 .thumbnail img{width:100%;height:auto;margin:0; padding:0; vertical-align:bottom;}
 
 /* Thumbnail overlay */
@@ -111,19 +111,21 @@ footer{clear:both;}
 
 .home-entry p{font-size:2em;padding:1.5em 0 0 1em;line-height:1em;margin:0;}
 .content-wrapper{position:relative; overflow:hidden; width:100%;padding:.5em;}
-article{width:100%;float:left;padding: 1em 0;}
+article{width:80%;float:left;padding: 1em;}
 article .index_thumbnail img {width:25%;float:left;height:auto;clear:left;margin-right:1em;}
 article footer {width:75%;float:right;height:auto;display:inline;clear:none;}
-article .home-entry{height:0; width:100%; padding-bottom:100%;background:rgb(35,212,96);}
+article .home-entry{height:0; width:100%; padding-bottom:100%;background:rgb(30,148,175);}
 article h2{font-weight:bold; font-size:1.25em;}
 article p{font-size:1.25em; line-height:1.4em;margin-bottom:1em;}
 article pre{background:rgb(215,215,215); padding:.75em 1em;margin-bottom:1em;}
 article pre code{background:rgb(245,245,245); padding:1em 1.25em;display:block;}
 .indent{padding-left:2em;padding-bottom:0; margin-bottom:0;}
-.entry-content {padding:1em;}
+/*.entry-content {padding:1em;}*/
+.project_link{overflow:hidden; clear:both;padding:1em 0;}
+.project_link a {background:rgb(30,30,30);line-height:2.5; font-size:1em; padding:0 1em;color:white; text-decoration:none; border-radius:.5em; transition: all .3s ease; float:right;}
+.project_link a:hover {background:rgb(30,148,175);}
 
-
-aside{width:80%; float:right;}
+aside{width:20%; float:right;}
 
 /* .open div */
 .open{width:100%; height:15em; background:rgb(12,240,122);}
