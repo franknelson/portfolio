@@ -1,4 +1,4 @@
-#  HTML5 Reset WordPress Theme
+#  Based on HTML5 Reset WordPress Theme
 
 HTML5 Reset is a simple set of *WordPress* best practices to get web projects off on the right foot.
 
@@ -15,7 +15,3 @@ HTML5 Reset is a simple set of *WordPress* best practices to get web projects of
 9. Google's Chrome Frame prompt for IE6 users
 10. iPhone/iPad/iTouch icon snippets, plus social/app meta tags for Twitter, Facebook, Windows 8
 11. Lots of other keen stuff
-
-## Get the plain HTML theme:
-
-https://github.com/murtaugh/HTML5-Reset

@@ -13,7 +13,7 @@ Version: 2.0
 -------------------------------------------------------------------------------*/
 
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
-body {font: 16px 'Open Sans', sans-serif;}
+body {font: 16px 'Droid Sans', sans-serif;}
 
 /* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
 
@@ -24,8 +24,8 @@ a {color: #03f;}
 a:hover {color: #69f;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
-::selection {background: #fcd700; color: #fff; text-shadow: none;}
+::-moz-selection{background: pink; color: rgb(30,30,30); text-shadow: none;}
+::selection {background: pink; color: rgb(30,30,30); text-shadow: none;}
 
 /*	j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #fcd700;}
@@ -47,23 +47,23 @@ html{background:pink;}
 header{overflow:hidden; position:relative;width:100%; clear:both; background:pink;}
 header h1{ width:2.75em; float:left;width:2.75em; text-align:center;font-size:1em;line-height:2.75em;background:rgb(25, 25, 25); color:rgb(225,225,225);}
 header h1 a, header h1 a:visited {color:rgb(225,225,225); text-decoration:none;}
-header h1 a:hover{color:red;}
-nav {width:80%; float:left; position:relative;overflow:hidden;}
+header h1 a:hover{color:rgb(30,148,175);}
+nav {width:80%; float:right; position:relative;overflow:hidden;padding-right:1em;}
 nav ul {float:right;}
 nav ul li {display:inline-block;float:left;padding-left:.75em;height:2.75em;line-height:2.75em;text-align:center;}
-nav ul li a{color:white; text-decoration:none;}
-nav ul li a:hover{color:rgb(75,75,75); text-decoration:none;}
+nav ul li a{color:30,30,30; text-decoration:none;}
+nav ul li a:hover{color:rgb(30,148,175); text-decoration:none;}
 nav ul li a:before{
     display:inline-block;
     padding: 0 5px;
     vertical-align:top;
     font-family: 'Fontawesome';
     font-size:2rem;
-    color:#fff;
+    color:rgb(30,30,30);
     -webkit-font-smoothing: antialiased;
     content: '\f15c';
 }
-nav ul li a:hover:before{color:rgb(75,75,75);}
+nav ul li a:hover:before{color:rgb(30,148,175);}
 /* styling the social nav with fontawesome */ 
 nav ul li a[href*="twitter.com"]::before{content: '\f099';}
 nav ul li a[href*="pinterest.com"]::before{content: '\f0d2';}
@@ -72,7 +72,7 @@ nav ul li a[href*="linkedin.com"]::before{content: '\f08c';}
 
 nav ul li a span {display:none;}
 
-h1.entry-title{font-size:2em; font-weight:bold;padding:0 .5em 1em .5em;}
+h1.entry-title{font-size:2em; font-weight:bold;padding:0 .5em 1em 0;}
 
 .thumbnail{width:100%; float:left;position:relative;}
 .thumbnail img{width:100%;height:auto;margin:0; padding:0; vertical-align:bottom;}

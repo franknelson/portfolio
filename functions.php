@@ -36,7 +36,7 @@
 		// Load Stylesheets
 		wp_enqueue_style( 'html5reset-reset', get_template_directory_uri() . '/reset.css' );
 		wp_enqueue_style( 'html5reset-style', get_stylesheet_uri() );
-        wp_enqueue_style( 'html5reset-style-googlefonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700');
+        wp_enqueue_style( 'html5reset-style-googlefonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700|Source+Sans+Pro:400,600,700|Noto+Sans:400,700|Droid+Sans:400,700|PT+Sans:400,700|Oxygen:400,700');
         wp_enqueue_style( 'html5reset-style-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 		// Load IE Stylesheet.

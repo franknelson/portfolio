@@ -29,7 +29,7 @@
                     echo "<div class='project_link'>";
                     echo '<a href ="';
                     echo the_field('project_link');
-                    echo ' ">Project Link ';
+                    echo '" target="_blank" >Project Link ';
                     echo "</a></div>";
                 }
             ?>
