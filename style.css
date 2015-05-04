@@ -41,7 +41,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 /* And here begins the WordPress fun.
 -------------------------------------------------------------------------------*/
 
-html{background:pink;}
+html{background:rgb(240,240,240);}
 #wrapper {max-width: 75em; margin: 0 auto; background:rgb(240,240,240);position:relative;}
 
 header{overflow:hidden; position:relative;width:100%; clear:both; background:pink;}
@@ -51,7 +51,7 @@ header h1 a:hover{color:rgb(30,148,175);}
 nav {width:80%; float:right; position:relative;overflow:hidden;padding-right:1em;}
 nav ul {float:right;}
 nav ul li {display:inline-block;float:left;padding-left:.75em;height:2.75em;line-height:2.75em;text-align:center;}
-nav ul li a{color:30,30,30; text-decoration:none;}
+nav ul li a{color:rgb(30,30,30); text-decoration:none;}
 nav ul li a:hover{color:rgb(30,148,175); text-decoration:none;}
 nav ul li a:before{
     display:inline-block;
@@ -102,12 +102,6 @@ h1.entry-title{font-size:2em; font-weight:bold;padding:0 .5em 1em 0;}
 
 footer{clear:both;}
 
-.gradient {
-  background-image:
-    linear-gradient(
-      red, #f06d06
-    );
-}
 
 .home-entry p{font-size:2em;padding:1.5em 0 0 1em;line-height:1em;margin:0;}
 .content-wrapper{position:relative; overflow:hidden; width:100%;padding:.5em;}
@@ -127,6 +121,8 @@ article pre code{background:rgb(245,245,245); padding:1em 1.25em;display:block;}
 
 aside{width:20%; float:right;}
 
+body.postid-1751 div.hero img{width:33%; height:auto;}
+
 /* .open div */
 .open{width:100%; height:15em; background:rgb(12,240,122);}
 
@@ -140,8 +136,30 @@ aside{width:20%; float:right;}
 /* Media queries!
 -------------------------------------------------------------------------------*/
 
-/* Always do mobile-first, and consider using em units: http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw
 
-@media screen and (min-width: 480px) {
 
-} */
+@media screen and (min-width: 48.75em) {
+html{background:rgb(240,240,240);}
+header {width:20%; float:left;}
+header h1{width:100%; height:0; padding-bottom:100%; float:left;text-align:center;font-size:4em;line-height:3.75em;}
+
+nav {width:100%; float:left; position:relative;height:0; padding-bottom:100%;overflow:hidden;padding-right:1em;}
+nav ul {float:left;width:100%;padding-top:.5em;}
+nav ul li {display:block;float:none;padding-left:27%;height:2.75em;line-height:2.75em;text-align:left;width:100%;}    
+/*nav ul li a:visited{color:rgb(30,30,30); text-decoration:none;}*/
+nav ul li a span {display:inline;}
+
+article.home-page{padding:0;}
+article .home-entry{height:0; width:50%;padding-bottom:50%;float:left;}
+/*
+.projects{float:left; overflow:hidden;}
+.projects .thumbnail {width:25%; height:auto;}
+.projects .thumbnail:nth-child(3n){width:50%;}
+*/
+
+article.home-page .thumbnail {width:25%; height:auto;}
+article.home-page .thumbnail:nth-child(4n){width:50%;}
+
+/*inner page*/
+article.project{width:60%;}
+} 
