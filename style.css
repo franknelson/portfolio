@@ -50,7 +50,7 @@ header h1 a, header h1 a:visited {color:rgb(225,225,225); text-decoration:none;}
 header h1 a:hover{color:rgb(30,148,175);}
 nav {width:80%; float:right; position:relative;overflow:hidden;padding-right:1em;}
 nav ul {float:right;}
-nav ul li {display:inline-block;float:left;padding-left:.75em;height:2.75em;line-height:2.75em;text-align:center;}
+nav ul li {display:inline-block;float:left;padding-left:.5em;height:2.75em;line-height:2.75em;text-align:center;}
 nav ul li a{color:rgb(30,30,30); text-decoration:none;}
 nav ul li a:hover{color:rgb(30,148,175); text-decoration:none;}
 nav ul li a:before{
@@ -103,9 +103,9 @@ h1.entry-title{font-size:2em; font-weight:bold;padding:1em .5em 1em 0;}
 footer{clear:both;}
 
 
-.home-entry p{font-size:2em;padding:1.5em 0 0 1em;line-height:1em;margin:0;}
+.home-entry p{font-size:1.4em;padding:1.5em 0 0 1em;line-height:1em;margin:0;}
 .content-wrapper{position:relative; overflow:hidden; width:100%;padding:.5em;}
-article{width:80%;float:left;padding: 1em;}
+article{width:100%;float:left;padding: 1em;}
 article .index_thumbnail img {width:25%;float:left;height:auto;clear:left;margin-right:1em;}
 article footer {width:75%;float:right;height:auto;display:inline;clear:none;}
 article .home-entry{height:0; width:100%; padding-bottom:100%;background:rgb(30,148,175);}
@@ -119,7 +119,9 @@ article pre code{background:rgb(245,245,245); padding:1em 1.25em;display:block;}
 .project_link a {background:rgb(30,30,30);line-height:2.5; font-size:1em; padding:0 1em;color:white; text-decoration:none; border-radius:.5em; transition: all .3s ease; float:right;}
 .project_link a:hover {background:rgb(30,148,175);}
 
-aside{width:20%; float:right;}
+article.home-page{padding:0; width:100%;}
+
+aside{width:100%; float:right;}
 
 body.postid-1751 div.hero img{width:33%; height:auto;}
 
@@ -136,6 +138,25 @@ body.postid-1751 div.hero img{width:33%; height:auto;}
 /* Media queries!
 -------------------------------------------------------------------------------*/
 
+/* --- 400px and up --- */
+@media screen and (min-width: 25em) {
+    
+    .home-entry p{font-size:1.75em;}
+    
+    aside .thumbnail{width:50%; height:auto;}
+}
+
+/* --- 640ps and up --- */
+@media screen and (min-width: 40em) {
+    
+    /* home page */
+    .home-entry p{font-size:1.5em;}
+    article .home-entry{height:0; width:50%;padding-bottom:50%;float:left;}
+    article.home-page .thumbnail {width:50%; height:auto;}
+    
+    /* inner page */
+    
+}
 
 /* --- 768px and up --- */
 @media screen and (min-width: 48em) {
@@ -150,23 +171,16 @@ nav ul li {display:block;float:none;padding-left:27%;height:2.75em;line-height:2
 nav ul li a:visited{color:rgb(30,30,30); text-decoration:none;}
 nav ul li a span {display:inline;}
 */
+    
+/* home page */
 header h1{width:3.75rem; line-height:3.75rem; font-size:1.75em;}
-nav ul li {line-height:3.75em;}
-article.home-page{padding:0;width:100%;}
-
-article .home-entry{height:0; width:50%;padding-bottom:50%;float:left;}
-article .home-entry p{font-size:1.75em;}
-/*
-.projects{float:left; overflow:hidden;}
-.projects .thumbnail {width:25%; height:auto;}
-.projects .thumbnail:nth-child(3n){width:50%;}
-*/
+nav ul li {line-height:3.75em; padding-left:1.25em;}
 
 article.home-page .thumbnail {width:25%; height:auto;}
 article.home-page .thumbnail:nth-child(4n){width:50%;}
 
 /*inner page*/
-article.project{width:60%;}
+    
 }
 
 /* --- 848px and up -- */
@@ -179,7 +193,7 @@ article.project{width:60%;}
     nav {width:100%; float:left; position:relative;height:0; padding-bottom:100%;overflow:hidden;padding-right:1em;}
     nav ul {float:left;width:100%;padding-top:.5em;}
     nav ul li {display:block;float:none;padding-left:27%;height:2.75em;line-height:2.75em;text-align:left;width:100%;}    
-    /*nav ul li a:visited{color:rgb(30,30,30); text-decoration:none;}
+    nav ul li a:visited{color:rgb(30,30,30); text-decoration:none;}
     nav ul li a span {display:inline;}
 */
 
@@ -191,19 +205,21 @@ article.project{width:60%;}
     article.home-page .thumbnail:nth-child(4n){width:50%;}
 
     /*inner page*/
-    article.project{width:60%;}
+    article.project{width:80%;}
+    aside {width:20%;}
+    aside .thumbnail {width:100%; height:auto;}
 } 
 
 /* --- 960 px and up --- */
 @media screen and (min-width: 60em) {
     header {width:20%; float:left;}
-    header h1{width:100%; height:0; padding-bottom:100%; float:left;text-align:center;font-size:4em;line-height:3.75em;}
+    header h1{width:100%; height:0; padding-bottom:100%; float:left;text-align:center;font-size:4em;line-height:3.5em;}
     
     article.home-page{width:80%;}
     
     nav {width:100%; float:left; position:relative;height:0; padding-bottom:100%;overflow:hidden;padding-right:1em;}
     nav ul {float:left;width:100%;padding-top:.5em;}
-    nav ul li {display:block;float:none;padding-left:27%;height:2.75em;line-height:2.75em;text-align:left;width:100%;}    
+    nav ul li {display:block;float:none;padding-left:17%;height:2em;line-height:2.4em;text-align:left;width:100%;}    
     nav ul li a:visited{color:rgb(30,30,30); text-decoration:none;}
     nav ul li a span {display:inline;}
     article .home-entry p{font-size:1.75em;}
@@ -211,4 +227,12 @@ article.project{width:60%;}
     /*inner page*/
     article.project{width:60%;}
     
-} 
+}
+
+/* --- 1200 px and up --- */
+@media screen and (min-width: 75em) {
+    header h1{line-height:3.75em;}
+    
+    nav ul {padding-top:.75em;}
+    nav ul li {padding-left:24%;height:2.75em;line-height:2.75em;}
+}
